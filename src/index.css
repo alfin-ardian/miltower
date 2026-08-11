@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #f7f4ec;
+  --color-cream-dark: #efe8d8;
+  --color-navy: #101827;
+  --color-navy-soft: #1c2a3a;
+  --color-yellow: #ffc928;
+  --color-orange: #f4512a;
+  --color-blue: #1769aa;
+  --color-wood: #d4a056;
+  --color-wood-dark: #b07a32;
+  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-cream);
+    color: var(--color-navy);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  #root {
+    min-height: 100svh;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-navy);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-yellow);
+    color: var(--color-navy);
+  }
+}
+
+@layer components {
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -100%;
+    z-index: 100;
+    background: var(--color-navy);
+    color: white;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+  }
+
+  .skip-link:focus {
+    top: 1rem;
+  }
+
+  .shadow-brutal {
+    box-shadow: 5px 5px 0 var(--color-navy);
+  }
+
+  .shadow-brutal-sm {
+    box-shadow: 3px 3px 0 var(--color-navy);
+  }
+
+  .card-editorial {
+    background: white;
+    border: 2px solid var(--color-navy);
+    border-radius: 0.85rem;
+    box-shadow: 4px 4px 0 var(--color-navy);
+  }
+
+  .wood-fill {
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        rgb(80 40 10 / 0.1) 0 2px,
+        transparent 2px 9px
+      ),
+      linear-gradient(180deg, #e8c58a 0%, #c48a3a 100%);
+  }
+
+  .highlight-block {
+    background: var(--color-yellow);
+    padding: 0 0.18em;
+    box-decoration-clone: clone;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wobble-tower {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(var(--wobble, 0deg));
+  }
+  70% {
+    transform: rotate(calc(var(--wobble, 0deg) * -1));
+  }
+}
+
+@keyframes pull-out {
+  to {
+    transform: translateX(130%) rotate(10deg);
+    opacity: 0;
+  }
+}
+
+@keyframes collapse-fall {
+  from {
+    transform: translateY(-72px) rotate(0deg);
+    opacity: 0.35;
+  }
+  to {
+    transform: translateY(0) rotate(var(--rot, 0deg));
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgb(244 81 42 / 0.45);
+  }
+  100% {
+    box-shadow: 0 0 0 12px rgb(244 81 42 / 0);
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-scroll 32s linear infinite;
+}
+
+.animate-float {
+  animation: float-y 4.5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-slow 5.5s ease-in-out infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.55s ease-out both;
+}
+
+.animate-pull {
+  animation: pull-out 0.55s ease-in forwards;
+}
+
+.animate-wobble {
+  animation: wobble-tower 2.8s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.animate-collapse-fall {
+  animation: collapse-fall 0.55s ease-out both;
+  transform: rotate(var(--rot, 0deg));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-float,
+  .animate-float-delayed,
+  .animate-fade-up,
+  .animate-pull,
+  .animate-wobble,
+  .animate-collapse-fall {
+    animation: none;
+  }
+}
