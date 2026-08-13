@@ -45,8 +45,31 @@ export function PhilosophyPage() {
         </div>
 
         <blockquote className="mt-12 border-l-4 border-yellow pl-6 text-xl font-medium leading-relaxed text-navy">
-          Play → Think → Write → Get feedback → Learn.
+          {t("decide.slogan")}
         </blockquote>
+
+        <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {(
+            [
+              ["D", "decide.d1"],
+              ["E", "decide.e1"],
+              ["C", "decide.c"],
+              ["I", "decide.i"],
+              ["D", "decide.d2"],
+              ["E", "decide.e2"],
+            ] as const
+          ).map(([letter, key], index) => (
+            <article key={`${letter}-${key}`} className="card-editorial p-5">
+              <p className="font-display text-2xl font-black text-yellow">{letter}</p>
+              <p className="mt-2 font-display text-sm font-extrabold uppercase tracking-wide text-navy">
+                {t(key)}
+              </p>
+              <p className="mt-1 font-display text-[10px] font-extrabold uppercase tracking-wider text-navy/40">
+                0{index + 1}
+              </p>
+            </article>
+          ))}
+        </div>
 
         <ButtonLink to="/game/setup" className="mt-10">
           {t("cta.tryPhilosophy")}

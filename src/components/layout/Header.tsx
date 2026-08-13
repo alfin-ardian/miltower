@@ -26,7 +26,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-navy/10 bg-cream">
       <PageContainer className="flex h-[72px] items-center justify-between gap-4">
-        <Logo />
+        <Logo compact />
 
         <nav
           className="hidden items-center gap-5 lg:flex"

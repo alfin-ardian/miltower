@@ -1,4 +1,5 @@
 import { CTASection } from "../components/landing/CTASection";
+import { DecideSection } from "../components/landing/DecideSection";
 import { GameStats } from "../components/landing/GameStats";
 import { Hero } from "../components/landing/Hero";
 import { Marquee } from "../components/landing/Marquee";
@@ -12,6 +13,7 @@ export function LandingPage() {
       <Marquee />
       <WhatIsMilTower />
       <GameStats />
+      <DecideSection />
       <PhilosophySection />
       <CTASection />
     </>

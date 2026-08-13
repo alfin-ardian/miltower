@@ -1,33 +1,36 @@
 import { Link } from "react-router-dom";
+import milLogo from "../../assets/mil-logo.png";
 import { useI18n } from "../../i18n/LanguageContext";
 import { cn } from "../../utils/cn";
 
 export function Logo({
   inverted = false,
   to = "/",
+  compact = false,
 }: {
   inverted?: boolean;
   to?: string;
+  compact?: boolean;
 }) {
   const { t } = useI18n();
 
   return (
     <Link
       to={to}
-      className="flex items-center gap-2.5 focus-visible:outline-offset-4"
+      className={cn(
+        "inline-flex items-center focus-visible:outline-offset-4",
+        inverted && "rounded-md bg-white/95 px-2 py-1",
+      )}
       aria-label={t("a11y.home")}
     >
-      <span className="grid h-9 w-9 place-items-center rounded-sm bg-orange font-display text-sm font-extrabold text-white">
-        MT
-      </span>
-      <span
+      <img
+        src={milLogo}
+        alt="MIL — Media Information Literacy"
         className={cn(
-          "font-display text-lg font-extrabold tracking-tight",
-          inverted ? "text-white" : "text-navy",
+          "w-auto object-contain",
+          compact ? "h-9" : "h-11 sm:h-12",
         )}
-      >
-        MIL TOWER
-      </span>
+      />
     </Link>
   );
 }

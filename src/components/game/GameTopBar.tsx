@@ -15,7 +15,7 @@ export function GameTopBar({
   return (
     <header className="border-b-2 border-navy/10 bg-cream">
       <PageContainer className="flex h-16 items-center justify-between gap-3">
-        <Logo to="/game" />
+        <Logo to="/game" compact />
         <p className="hidden font-display text-xs font-extrabold uppercase tracking-[0.18em] text-navy sm:block">
           {t("game.turnOf")} {String(turnNumber).padStart(2, "0")}
         </p>

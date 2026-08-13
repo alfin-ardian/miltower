@@ -1,4 +1,3 @@
-import { Play } from "lucide-react";
 import { ButtonLink } from "../ui/Button";
 import { Highlight } from "../ui/Highlight";
 import { PageContainer } from "../layout/PageContainer";
@@ -15,17 +14,36 @@ export function Hero() {
           <p className="inline-flex rounded-full bg-yellow px-4 py-1.5 font-display text-[11px] font-extrabold uppercase tracking-[0.16em] text-navy">
             {t("hero.eyebrow")}
           </p>
-          <h1 className="mt-6 font-display text-[2.35rem] font-black uppercase leading-[1.05] tracking-tight text-navy sm:text-5xl lg:text-[3.35rem]">
-            {t("hero.pull")} <Highlight>{t("hero.block")}</Highlight>, {t("hero.answer")}{" "}
-            <Highlight>{t("hero.card")}</Highlight>, {t("hero.protect")}
+          <h1 className="mt-6 font-display text-[2.35rem] font-black uppercase leading-[1.02] tracking-tight text-navy sm:text-5xl lg:text-[3.35rem]">
+            <span className="block">{t("hero.line1")}</span>
+            <span className="block">{t("hero.line2")}</span>
+            <span className="block">
+              <Highlight>{t("hero.line3")}</Highlight>
+            </span>
+            <span className="block">
+              <Highlight>{t("hero.line4")}</Highlight>
+            </span>
+            <span className="block">{t("hero.line5")}</span>
+            <span className="block">{t("hero.line6")}</span>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-navy/80 md:text-lg">
             {t("hero.body")}
           </p>
+          <div className="mt-5 inline-flex max-w-xl bg-navy px-4 py-2.5 font-display text-[10px] font-extrabold uppercase leading-snug tracking-[0.12em] text-white sm:text-[11px]">
+            {t("hero.tagline")}
+          </div>
           <div className="mt-8 flex flex-wrap gap-3">
-            <ButtonLink to="/game/setup">{t("cta.startQuiz")}</ButtonLink>
-            <ButtonLink to="/mechanism" variant="secondary">
-              <Play size={16} fill="currentColor" />
+            <ButtonLink
+              to="/game/setup"
+              className="rounded-md shadow-brutal-sm"
+            >
+              {t("cta.startQuiz")}
+            </ButtonLink>
+            <ButtonLink
+              to="/mechanism"
+              variant="secondary"
+              className="rounded-md"
+            >
               {t("cta.howToPlay")}
             </ButtonLink>
           </div>
