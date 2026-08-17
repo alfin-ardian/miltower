@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
-import milLogo from "../../assets/mil-logo.png";
+import milLogo from "../../assets/mil-logo-transparent.png";
 import { useI18n } from "../../i18n/LanguageContext";
 import { cn } from "../../utils/cn";
 
 export function Logo({
-  inverted = false,
   to = "/",
   compact = false,
 }: {
@@ -17,18 +16,15 @@ export function Logo({
   return (
     <Link
       to={to}
-      className={cn(
-        "inline-flex items-center focus-visible:outline-offset-4",
-        inverted && "rounded-md bg-white/95 px-2 py-1",
-      )}
+      className="inline-flex items-center focus-visible:outline-offset-4"
       aria-label={t("a11y.home")}
     >
       <img
         src={milLogo}
         alt="MIL — Media Information Literacy"
         className={cn(
-          "w-auto object-contain",
-          compact ? "h-9" : "h-11 sm:h-12",
+          "w-auto object-contain object-left",
+          compact ? "h-10 sm:h-11" : "h-12 sm:h-14",
         )}
       />
     </Link>

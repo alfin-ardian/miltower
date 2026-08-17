@@ -2,29 +2,24 @@ import type { TeamMember } from "../types/game";
 
 export const TEAM: TeamMember[] = [
   {
-    name: "Rania Azzahra Putri",
+    name: "Riris Rhegita Chayani",
     role: "Konsep & Riset Kartu",
-    initial: "RA",
+    initial: "RR",
   },
   {
-    name: "Bagas Wicaksono",
+    name: "Alfi Syakilah Mayah Shafa",
     role: "Mekanisme & Aturan Main",
-    initial: "BW",
+    initial: "AS",
   },
   {
-    name: "Nadia Putri Maharani",
+    name: "Novia Salsabila",
     role: "Desain Visual Balok",
-    initial: "NP",
+    initial: "NS",
   },
   {
-    name: "Fikri Ramadhan",
+    name: "Alfin Ardian",
     role: "Pengembangan Antarmuka",
-    initial: "FR",
-  },
-  {
-    name: "Aulia Khairunnisa",
-    role: "Konten Literasi Media",
-    initial: "AK",
+    initial: "AA",
   },
 ];
 

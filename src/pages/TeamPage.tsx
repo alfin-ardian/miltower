@@ -7,11 +7,10 @@ import { useI18n } from "../i18n/LanguageContext";
 const COLORS = ["bg-yellow", "bg-orange", "bg-blue", "bg-cream-dark", "bg-yellow"];
 
 const ROLE_KEY: Record<string, string> = {
-  RA: "team.rRA",
-  BW: "team.rBW",
-  NP: "team.rNP",
-  FR: "team.rFR",
-  AK: "team.rAK",
+  RR: "team.rRA",
+  AS: "team.rBW",
+  NS: "team.rNP",
+  AA: "team.rFR",
 };
 
 export function TeamPage() {
