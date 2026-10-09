@@ -15,7 +15,7 @@ export const CATEGORIES: Record<CategoryId, CategoryMeta> = {
     label: "Media Literacy",
     labelId: "Literasi Media",
     color: "orange",
-    hex: "#E87A72",
+    hex: "#E25555",
     blurb: "Membaca pesan, bingkai, dan kepentingan di balik konten yang beredar.",
   },
   "information-literacy": {
@@ -44,7 +44,7 @@ export const CATEGORY_ORDER: CategoryId[] = [
 
 export const COLOR_LABEL: Record<BlockColor, string> = {
   yellow: "Balok Kuning",
-  orange: "Balok Coral",
+  orange: "Balok Merah",
   blue: "Balok Hijau",
   wood: "Balok Kayu",
 };

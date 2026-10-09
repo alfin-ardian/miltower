@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  /* Palette matched to MIL logo blocks: coral, mustard, sage */
+  /* Palette: red, mustard yellow, sage green */
   --color-cream: #f7f5f0;
   --color-cream-dark: #ebe6dc;
   --color-navy: #243028;
   --color-navy-soft: #364038;
   --color-yellow: #f5d070;
-  --color-orange: #e87a72;
+  --color-orange: #e25555;
   --color-blue: #8fb894;
   --color-wood: #d4a056;
   --color-wood-dark: #b07a32;
