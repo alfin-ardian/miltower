@@ -65,7 +65,7 @@ export function QuestionPage() {
           <p
             className={cn(
               "inline-flex items-center gap-2 rounded-full border-2 border-navy px-3 py-1 font-display text-sm font-extrabold",
-              seconds <= 20 ? "bg-orange text-white" : "bg-white text-navy",
+              seconds <= 20 ? "bg-orange text-navy" : "bg-white text-navy",
             )}
             aria-live="polite"
             aria-label={t("a11y.timeLeft", { time: formatTime(seconds) })}

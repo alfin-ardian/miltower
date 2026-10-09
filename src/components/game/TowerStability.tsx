@@ -32,7 +32,7 @@ export function TowerStability({ value }: { value: number }) {
             label === "stable" && "bg-blue/15 text-blue",
             label === "wobbling" && "bg-yellow text-navy",
             label === "critical" && "bg-orange/15 text-orange",
-            label === "collapsing" && "bg-orange text-white",
+            label === "collapsing" && "bg-orange text-navy",
           )}
         >
           {copy}

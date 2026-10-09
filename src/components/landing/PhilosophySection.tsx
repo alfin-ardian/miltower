@@ -14,7 +14,7 @@ export function PhilosophySection() {
   return (
     <section className="py-20 md:py-24">
       <PageContainer className="grid items-center gap-10 lg:grid-cols-2">
-        <div className="relative overflow-hidden rounded-xl border-2 border-navy bg-[#c9a36a] shadow-brutal">
+        <div className="relative overflow-hidden rounded-xl border-2 border-navy bg-cream-dark shadow-brutal">
           <PhilosophyVisual caption={t("philosophy.session")} />
         </div>
 

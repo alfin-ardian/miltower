@@ -59,8 +59,9 @@ export function categoryFromColor(
   color: BlockColor,
   turnNumber: number,
 ): CategoryId {
-  if (color === "yellow") return "media-literacy";
-  if (color === "orange") return "information-literacy";
+  // Matches MIL logo: coral → media, yellow → information, green → digital
+  if (color === "orange") return "media-literacy";
+  if (color === "yellow") return "information-literacy";
   if (color === "blue") return "digital-literacy";
   return CATEGORY_ORDER[(turnNumber - 1) % CATEGORY_ORDER.length];
 }

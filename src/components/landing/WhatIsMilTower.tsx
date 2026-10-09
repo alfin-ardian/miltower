@@ -39,9 +39,9 @@ export function WhatIsMilTower() {
                 </p>
                 {card.swatches ? (
                   <div className="mt-4 flex gap-2" aria-label={t("a11y.colorCode")}>
-                    <span className="h-3 w-3 rounded-full border border-navy bg-orange" />
-                    <span className="h-3 w-3 rounded-full border border-navy bg-yellow" />
-                    <span className="h-3 w-3 rounded-full border border-navy bg-blue" />
+                    <span className="h-3 w-3 rounded-full border border-navy bg-orange" title="Media" />
+                    <span className="h-3 w-3 rounded-full border border-navy bg-yellow" title="Information" />
+                    <span className="h-3 w-3 rounded-full border border-navy bg-blue" title="Literacy" />
                   </div>
                 ) : null}
               </article>

@@ -14,16 +14,16 @@ export const CATEGORIES: Record<CategoryId, CategoryMeta> = {
     id: "media-literacy",
     label: "Media Literacy",
     labelId: "Literasi Media",
-    color: "yellow",
-    hex: "#FFC928",
+    color: "orange",
+    hex: "#E87A72",
     blurb: "Membaca pesan, bingkai, dan kepentingan di balik konten yang beredar.",
   },
   "information-literacy": {
     id: "information-literacy",
     label: "Information Literacy",
     labelId: "Literasi Informasi",
-    color: "orange",
-    hex: "#F4512A",
+    color: "yellow",
+    hex: "#F5D070",
     blurb: "Menelusuri sumber, membandingkan klaim, dan menimbang bukti.",
   },
   "digital-literacy": {
@@ -31,7 +31,7 @@ export const CATEGORIES: Record<CategoryId, CategoryMeta> = {
     label: "Digital Literacy",
     labelId: "Literasi Digital",
     color: "blue",
-    hex: "#1769AA",
+    hex: "#8FB894",
     blurb: "Menjaga akun, privasi, dan keputusan aman di ruang daring.",
   },
 };
@@ -44,7 +44,7 @@ export const CATEGORY_ORDER: CategoryId[] = [
 
 export const COLOR_LABEL: Record<BlockColor, string> = {
   yellow: "Balok Kuning",
-  orange: "Balok Oranye",
-  blue: "Balok Biru",
+  orange: "Balok Coral",
+  blue: "Balok Hijau",
   wood: "Balok Kayu",
 };
